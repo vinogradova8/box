@@ -3,8 +3,6 @@ import './Header.scss';
 import { NavLink } from 'react-router-dom';
 import '../../i18n';
 import { useTranslation } from 'react-i18next';
-// import faq from '../../api/faq.json';
-
 import cn from 'classnames';
 import i18next from 'i18next';
 import { LOCALS } from '../../i18n/constants';
@@ -39,7 +37,11 @@ export const Header: React.FC = (
   const [isLanguageDropDownVisible, setIsLanguageDropDownVisible] =
     useState(false);
 
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+
   const languages = [LOCALS.ENG, LOCALS.UKR, LOCALS.DEU];
+
+  document.body.style.overflow = `hidden`;
 
   return (
     <header
@@ -57,8 +59,6 @@ export const Header: React.FC = (
                   className={({ isActive }) =>
                     cn('menu-link', {
                       'menu-link--active': isActive,
-                      // 'menu-link--dark-theme': darkTheme,
-                      // 'menu-link--dark-theme-active': darkTheme && isActive,
                     })
                   }
                 >
@@ -120,7 +120,41 @@ export const Header: React.FC = (
             className={cn('header__menu icon-menu', {
               // 'header__menu--dark-theme': darkTheme,
             })}
+            onClick={() => {
+              setIsBurgerMenuOpen(true);
+              window.addEventListener('scroll', () => {
+                window.scrollTo({ top: 0 });
+              });
+            }}
           ></button>
+        </div>
+
+        <div
+          className={cn('header__burger', {
+            'header__burger--visible': isBurgerMenuOpen,
+          })}
+        >
+          <nav className="header__navigation header__navigation--burger">
+            <ul
+              className="header__navigation-list 
+						header__navigation-list--burger"
+            >
+              {links.map(link => (
+                <li key={link[0]}>
+                  <NavLink
+                    to={link[1] === 'home' ? `/` : `/${link[1]}`}
+                    className={({ isActive }) =>
+                      cn('menu-link menu-link--burger', {
+                        'menu-link--active': isActive,
+                      })
+                    }
+                  >
+                    <p>{link[0]}</p>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
