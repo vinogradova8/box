@@ -1,0 +1,45 @@
+@import '../../styles/utils/';
+
+.homepage {
+  &__container {
+    @include content-padding-inline;
+
+    padding-top: 88px;
+  }
+
+  &__title-box {
+    width: 260px;
+    height: 281px;
+    background: url('../../../public/images/decor/boxing-glove.svg') no-repeat;
+    margin: 0 auto;
+    padding-top: 90px;
+    margin-bottom: 89px;
+  }
+
+  &__main-text {
+    & span {
+      color: $white-color;
+    }
+
+    margin-bottom: 48px;
+  }
+
+  &__contact-button {
+		display: block;
+    margin: 0 auto;
+		margin-bottom: 104px;
+  }
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 80px;
+	}
+}
+
+.title {
+  color: $red-color;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 44px;
+}

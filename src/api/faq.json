@@ -1,0 +1,47 @@
+[
+  {
+    "eng": {
+      "question": "",
+      "answer": ""
+    },
+
+    "ukr": {
+      "question": "",
+      "answer": ""
+    },
+
+    "deu": {
+      "question": "",
+      "answer": ""
+    }
+  },
+
+	{
+    "eng": {
+      "question": "",
+      "answer": ""
+    },
+
+    "ukr": {
+      "question": "",
+      "answer": ""
+    },
+
+    "deu": {
+      "question": "",
+      "answer": ""
+    }
+  }
+]
+
+{
+    "en": {
+      "question": "How long does one lesson last?",
+      "answer": "1 hour"
+    },
+
+    "uk": {
+      "question": "Скільки триває одне заняття?",
+      "answer": "1 година"
+    }
+  }
