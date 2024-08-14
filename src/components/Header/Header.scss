@@ -2,9 +2,7 @@
 
 .header {
   position: sticky;
-  // height: 48px;
-  // padding-block: 16px;
-  // height: 100px;
+
   min-width: 320px;
   color: $main-text-color;
   background-color: $gray-color;
@@ -20,11 +18,6 @@
     // padding-block: 24px;
   }
 
-  // &--dark-theme {
-  //   background-color: $dark-bg-color;
-  //   color: $bg-color;
-  // }
-
   &__container {
     @include content-padding-inline;
 
@@ -37,13 +30,13 @@
     max-width: 1200px;
     margin: 0 auto;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 800px) {
       gap: 150px;
     }
 
     @include on-desktop {
       padding-block: 24px;
-      gap: 300px;
+      gap: 200px;
     }
   }
 
@@ -134,6 +127,10 @@
       // }
     }
 
+    // @media (min-width: 800px) {
+    // 	gap: 16px;
+    // }
+
     &--burger {
       display: flex;
       flex-direction: column;
@@ -141,10 +138,6 @@
       align-items: center;
       opacity: 1;
     }
-
-    // @include on-desktop {
-    //   gap: 5px;
-    // }
   }
 
   &__language-drop-down {
@@ -160,15 +153,15 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(31, 31, 34, 0.7);
-		opacity: 0;
-		animation: burger 1s linear 0s 1 normal forwards;
-		
-		@keyframes burger {
-			100% {
-				opacity: 1;
-			}
-		}
-		
+    opacity: 0;
+    animation: burger 1s linear 0s 1 normal forwards;
+
+    @keyframes burger {
+      100% {
+        opacity: 1;
+      }
+    }
+
     &--visible {
       display: block;
     }
@@ -181,14 +174,13 @@
   font-family: $main-font-family;
   font-weight: 500;
   font-size: 14px;
-  // line-height: 130%;
   letter-spacing: 1px;
   color: $main-text-color;
   // height: 12px;
   // overflow: hidden;
 
   @include on-desktop {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   &--burger {
@@ -241,10 +233,6 @@
     // width: 61px;
     font-size: 14px;
 
-    // 	@media (min-width: 900px) {
-    // 	font-size: 20px;
-    // }
-
     @include on-desktop {
       font-size: 20px;
       gap: 8px;
@@ -252,7 +240,6 @@
   }
 
   &__language {
-    // width: 29px;
   }
 
   &__trigger {
@@ -270,8 +257,6 @@
       background: url('../../../public/images/icons/arrow-down.svg') no-repeat;
       width: 10px;
       height: 5px;
-      // top: 10px;
-      // left: 7px;
       z-index: 10;
       transition: all 0.3s ease 0s;
 
