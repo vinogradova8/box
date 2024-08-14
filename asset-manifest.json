@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.81377a7d.css",
-    "main.js": "./static/js/main.02c60564.js",
+    "main.css": "./static/css/main.c4bbf13d.css",
+    "main.js": "./static/js/main.8f9421a5.js",
     "static/media/fa-solid-900.ttf": "./static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
     "static/media/fa-brands-400.ttf": "./static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
     "static/media/fa-solid-900.woff2": "./static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
@@ -16,13 +16,15 @@
     "static/media/boxing-glove.svg": "./static/media/boxing-glove.0a814ebcf2aacbb0763e.svg",
     "static/media/arrow-down-big.svg": "./static/media/arrow-down-big.42e758e38eb7bacc2b42.svg",
     "index.html": "./index.html",
+    "static/media/arrow-top.svg": "./static/media/arrow-top.38cb73ff432311434ec0.svg",
+    "static/media/close.svg": "./static/media/close.8e763107dae2da807bc9.svg",
     "static/media/menu.svg": "./static/media/menu.bdec33d071737dba3902.svg",
     "static/media/arrow-down.svg": "./static/media/arrow-down.c8841d140b425a120667.svg",
-    "main.81377a7d.css.map": "./static/css/main.81377a7d.css.map",
-    "main.02c60564.js.map": "./static/js/main.02c60564.js.map"
+    "main.c4bbf13d.css.map": "./static/css/main.c4bbf13d.css.map",
+    "main.8f9421a5.js.map": "./static/js/main.8f9421a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.81377a7d.css",
-    "static/js/main.02c60564.js"
+    "static/css/main.c4bbf13d.css",
+    "static/js/main.8f9421a5.js"
   ]
 }
