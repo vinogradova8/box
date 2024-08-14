@@ -28,8 +28,8 @@ export const Header: React.FC = (
   const links = [
     [t('Home'), 'home'],
     [t('Team'), 'team'],
-    [t('Price'), 'price'],
-    [t('News'), 'news'],
+    [t('FAQ'), 'faq'],
+    [t('Gallery'), 'gallery'],
     [t('Support'), 'support-us'],
     [t('Contacts'), 'сontacts'],
   ];
@@ -41,14 +41,10 @@ export const Header: React.FC = (
 
   const languages = [LOCALS.ENG, LOCALS.UKR, LOCALS.DEU];
 
-  document.body.style.overflow = `hidden`;
+  const app = document.querySelector('.app');
 
   return (
-    <header
-      className={cn('header', {
-        // 'header--dark-theme': darkTheme,
-      })}
-    >
+    <header className="header">
       <div className="header__container">
         <nav className="header__navigation">
           <ul className="header__navigation-list">
@@ -118,13 +114,17 @@ export const Header: React.FC = (
           <button
             type="button"
             className={cn('header__menu icon-menu', {
-              // 'header__menu--dark-theme': darkTheme,
+              'header__menu--is-active': isBurgerMenuOpen,
             })}
             onClick={() => {
-              setIsBurgerMenuOpen(true);
-              window.addEventListener('scroll', () => {
-                window.scrollTo({ top: 0 });
-              });
+              setIsBurgerMenuOpen(!isBurgerMenuOpen);
+
+              if (!isBurgerMenuOpen) {
+                app?.classList.add('fixed');
+              } else {
+                app?.classList.remove('fixed');
+                // window.removeEventListener('scroll', stopScrolling, true);
+              }
             }}
           ></button>
         </div>
@@ -148,6 +148,10 @@ export const Header: React.FC = (
                         'menu-link--active': isActive,
                       })
                     }
+                    onClick={() => {
+                      setIsBurgerMenuOpen(false);
+                      app?.classList.remove('fixed');
+                    }}
                   >
                     <p>{link[0]}</p>
                   </NavLink>

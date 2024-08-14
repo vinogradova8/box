@@ -4,9 +4,10 @@
   &__container {
     @include content-padding-inline;
 
-		max-width: 1440px;
-		margin: 0 auto;
+    max-width: 1440px;
+    margin: 0 auto;
     padding-block: 88px;
+    max-width: 1200px;
 
     @include on-desktop {
       padding-block: 96px;
@@ -68,7 +69,6 @@
 
   &__contact-button {
     display: block;
-		
 
     @include on-tablet {
       &--first {
@@ -79,17 +79,15 @@
           grid-column: 4/5;
         }
       }
-
-			
     }
 
-		&--second {
-        margin: 0 auto;
+    &--second {
+      margin: 0 auto;
 
-				@include on-tablet {
-					margin-right: 0;
-				}
+      @include on-tablet {
+        margin-right: 0;
       }
+    }
   }
 
   &__info {
@@ -109,10 +107,10 @@
     // gap: 24px;
     @include page-grid;
 
-		@media (min-width: 800px) {
-			grid-template-columns: repeat(4, 1fr);
-			gap: 48px;
-		}
+    @media (min-width: 800px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 48px;
+    }
   }
 
   &__small-title {
@@ -128,19 +126,29 @@
   }
 
   &__text {
+    justify-self: start;
+    // justify-content: start;
+    // align-content: start;
+
+    // & ul {
+    //   text-align-last: left;
+    // }
     @include on-desktop {
       grid-column: span 3;
       font-size: 16px;
+
+      // align-items: start;
+      // justify-items: start;
     }
 
-		@media (min-width: 800px) {
-			grid-column: 2/5;
-		}
+    @media (min-width: 800px) {
+      grid-column: 2/5;
+    }
   }
 }
 
 .title {
-  font-family: $second-font-family;
+  font-family: $third-font-family;
   color: $second-text-color;
   // padding-left: 38px;
   text-transform: uppercase;

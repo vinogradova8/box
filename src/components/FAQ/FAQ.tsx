@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react';
-import './News.scss';
-import i18next from '../../i18n';
-import faq from '../../api/faq.json';
-import { LOCALS } from '../../i18n/constants';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+import './FAQ.scss';
+// import i18next from '../../i18n';
+// import faq from '../../api/faq.json';
+// import { LOCALS } from '../../i18n/constants';
+// import { useTranslation } from 'react-i18next';
 
-export const News: React.FC = ({}) => {
-  const { t } = useTranslation();
+export const FAQ: React.FC = ({}) => {
+  // const { t } = useTranslation();
 
   return (
     <>
-      <p>NEWS</p>
-      {t('Home')}
+      <p>FAQ</p>
+      {/* {t('Home')}
       <div>
         {i18next.language === LOCALS.UKR &&
           faq.map(item => (
@@ -28,7 +28,7 @@ export const News: React.FC = ({}) => {
               <p>{item.eng.answer}</p>
             </Fragment>
           ))}
-      </div>
+      </div> */}
     </>
   );
 };

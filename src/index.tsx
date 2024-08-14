@@ -6,10 +6,10 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import './index.scss';
 import { App } from './App';
 import { HomePage } from './components/HomePage';
-import { SupportUs } from './components/SupportUs';
-import { OurTeam } from './components/OurTeam';
-import { Price } from './components/Price';
-import { News } from './components/News';
+import { Support } from './components/Suppor';
+import { Team } from './components/Team';
+import { Gallery } from './components/Gallery';
+import { FAQ } from './components/FAQ';
 import { Contacts } from './components/Contacts';
 // import { HomePage } from './components/HomePage';
 
@@ -20,10 +20,10 @@ createRoot(document.getElementById('root') as HTMLElement).render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />}></Route>
-        <Route path="support-us" element={<SupportUs />}></Route>
-        <Route path="team" element={<OurTeam />}></Route>
-        <Route path="price" element={<Price />}></Route>
-        <Route path="news" element={<News />}></Route>
+        <Route path="support-us" element={<Support />}></Route>
+        <Route path="team" element={<Team />}></Route>
+        <Route path="gallery" element={<Gallery />}></Route>
+        <Route path="faq" element={<FAQ />}></Route>
         <Route path="сontacts" element={<Contacts />}></Route>
         {/* <Route path="phones">
           <Route index element={<PhonesPage />}></Route>

@@ -1,11 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './HomePage.scss';
-
-import faq from '../../api/faq.json';
 import '../../i18n';
-import i18next from 'i18next';
+// import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
-import { LOCALS } from '../../i18n/constants';
 
 export const HomePage: React.FC = ({}) => {
   const { t } = useTranslation();
@@ -20,10 +17,11 @@ export const HomePage: React.FC = ({}) => {
 
           <div className="homepage__main-info">
             <p className="homepage__main-text">
-              We are coaches who have trained <span>boxing</span> champions of
+              {t('Main text')}
+              {/* We are coaches who have trained <span>boxing</span> champions of
               Austria, boxing champions of Ukraine, <span>winners</span> and
               prize-winners of international tournaments and European
-              championships.
+              championships. */}
             </p>
 
             <button
@@ -35,78 +33,41 @@ export const HomePage: React.FC = ({}) => {
           </div>
 
           <div className="homepage__info">
-            {t('Home')}
-            <div>
-              {i18next.language === LOCALS.UKR &&
-                faq.map(item => (
-                  <Fragment key={item.ukr.question}>
-                    <p>{item.ukr.question}</p>
-                    <p>{item.ukr.answer}</p>
-                  </Fragment>
-                ))}
-
-              {i18next.language === LOCALS.ENG &&
-                faq.map(item => (
-                  <Fragment key={item.ukr.question}>
-                    <p>{item.eng.question}</p>
-                    <p>{item.eng.answer}</p>
-                  </Fragment>
-                ))}
-            </div>
             <section className="homepage__info-item">
-              <h2 className="homepage__small-title">About work out</h2>
+              <h2 className="homepage__small-title">{t('Section-1 title')}</h2>
+
+              <p className="homepage__text">{t('Section-1 text')}</p>
+            </section>
+
+            <section className="homepage__info-item">
+              <h2 className="homepage__small-title">{t('Section-2 title')}</h2>
 
               <p className="homepage__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <ul>
+                  <li>{t('Section-2 text-1')}</li>
+                  <li>{t('Section-2 text-2')}</li>
+                  <li>{t('Section-2 text-3')}</li>
+                  <li>{t('Section-2 text-4')}</li>
+                  <li>{t('Section-2 text-5')}</li>
+                  <li>{t('Section-2 text-6')}</li>
+                  <li>{t('Section-2 text-7')}</li>
+                  <li>{t('Section-2 text-8')}</li>
+                  <li>{t('Section-2 text-9')}</li>
+                  <li>{t('Section-2 text-10')}</li>
+                </ul>
               </p>
             </section>
 
             <section className="homepage__info-item">
-              <h2 className="homepage__small-title">Programm</h2>
+              <h2 className="homepage__small-title">{t('Section-3 title')}</h2>
 
-              <p className="homepage__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <p className="homepage__text">{t('Section-3 text')}</p>
             </section>
 
             <section className="homepage__info-item">
-              <h2 className="homepage__small-title">Privet</h2>
+              <h2 className="homepage__small-title">{t('Section-4 title')}</h2>
 
-              <p className="homepage__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </section>
-
-            <section className="homepage__info-item">
-              <h2 className="homepage__small-title">Benefits</h2>
-
-              <p className="homepage__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <p className="homepage__text">{t('Section-4 text')}</p>
             </section>
           </div>
 
